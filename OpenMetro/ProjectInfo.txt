@@ -1,6 +1,6 @@
 Project Overview:
 Project By-Shashank Gupta
-Project Name: WeatherPage
+Project Name: WeatherNow
 Purpose: This React-based web application fetches and displays current weather conditions for a user-specified city, including temperature, UV index, visibility, and weather descriptions.
 Features:
 *Fetches geolocation data for a city.
