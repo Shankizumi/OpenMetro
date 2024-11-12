@@ -1,8 +1,3 @@
-/* src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -32,20 +27,44 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1500964757637-c85e8a162699?q=80&w=1806&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-attachment: fixed; 
 }
 
 h1 {
+  font-size: 6.2em;
+  line-height: 1.1;
+  margin: 10px;
+  color: transparent; 
+  background-image: linear-gradient(to right, #ff7e5f, #ff6a00, #ff1493, #f9a825, #ff512f); /* Multi-colored sunset gradient */
+  -webkit-background-clip: text;
+  background-clip: text; 
+}
+
+p{
+  color: black;
+  font-size: 1.3em;
+}
+
+.banner{
   font-size: 3.2em;
   line-height: 1.1;
+  font-weight: 700;
+  color: white; 
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  margin: 10px;
+  font-size: 20px;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
@@ -53,11 +72,43 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: orange;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+.container {
+  height: 80vh;
+  width: 80vw;
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust opacity here (0 is fully transparent, 1 is fully opaque) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+}
+.container-box{
+  height: 40vh;
+  width: 60vw;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity here (0 is fully transparent, 1 is fully opaque) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+}
+
+input{
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid black;
+  text-align: center;
+  outline: none;
+  background-color: transparent;
+  color: black;
+  font-size: 20px;
+  margin: 20px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -71,4 +122,24 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+  
+
+}
+
+@media (max-width: 800px) {
+  .banner{
+    font-size: 1.8em;
+
+  }
+  h1 {
+    font-size: 3.2em;
+
+}
+input{
+  font-size: 15px;
+}
+p{
+  font-size: 1em;
+}
+
 }

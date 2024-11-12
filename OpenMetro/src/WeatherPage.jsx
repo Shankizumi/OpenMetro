@@ -68,25 +68,25 @@ function WeatherPage() {
     }
   }, [city]);
 
-  if (loading) return <div className="flex justify-center items-center h-screen">Loading...</div>;
-  if (error) return <div className="flex justify-center items-center h-screen text-red-500">{error}</div>;
+  if (loading) return  <div className="container-box"> <div className="banner">Loading...</div></div>;
+  if (error) return <div className="container-box"> <div className="banner">{error}</div></div>;
 
   // Get weather condition description based on weathercode
   const weatherCondition = weatherDescriptions[weatherData?.hourly?.weathercode?.[0]] || "Unknown condition";
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Weather in {city}</h1>
-      <div className="mb-4">
-        <p><strong>Temperature:</strong> {weatherData.hourly.temperature_2m[0]}°C</p>
+    <div className="container">
+      <h1 className="">Weather in {city}</h1>
+      <div className="">
         <p><strong>Weather Condition:</strong> {weatherCondition}</p>
+        <p><strong>Temperature:</strong> {weatherData.hourly.temperature_2m[0]}°C</p>
         <p><strong>UV Index:</strong> {weatherData.hourly.uv_index[0]}</p>
         <p><strong>Visibility:</strong> {weatherData.hourly.visibility[0]} m</p>
       </div>
 
       {weatherData.alerts && (
-        <div className="bg-yellow-100 p-2 rounded-md">
-          <h2 className="font-bold">Weather Alerts</h2>
+        <div className="">
+          <h2 className="">Weather Alerts</h2>
           <p>{weatherData.alerts}</p>
         </div>
       )}
