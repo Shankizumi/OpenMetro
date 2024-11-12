@@ -42,6 +42,7 @@ h1 {
   line-height: 1.1;
   margin: 10px;
   color: transparent; 
+  animation: slideUpFadeIn 1s ease-out forwards;
   background-image: linear-gradient(to right, #ff7e5f, #ff6a00, #ff1493, #f9a825, #ff512f); /* Multi-colored sunset gradient */
   -webkit-background-clip: text;
   background-clip: text; 
@@ -50,6 +51,7 @@ h1 {
 p{
   color: black;
   font-size: 1.3em;
+  animation: slideUpFadeIn 1s ease-out forwards;
 }
 
 .banner{
@@ -70,6 +72,8 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  animation: slideUpFadeIn 1s ease-out forwards;
+
 }
 button:hover {
   background-color: orange;
@@ -87,6 +91,7 @@ button:focus-visible {
   justify-content: center;
   text-align: center;
   border-radius: 20px;
+  animation: slideUpFadeIn 1s ease-out forwards;
 }
 .container-box{
   height: 40vh;
@@ -109,6 +114,20 @@ input{
   color: black;
   font-size: 20px;
   margin: 20px;
+  animation: slideUpFadeIn 1s ease-out forwards;
+
+}
+
+
+@keyframes slideUpFadeIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (prefers-color-scheme: light) {
